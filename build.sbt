@@ -1,4 +1,5 @@
-scalaVersion := "3.2.2"
+// scalaVersion := "3.2.2"
+scalaVersion := "2.13.10"
 
 enablePlugins(ScalaNativePlugin)
 
