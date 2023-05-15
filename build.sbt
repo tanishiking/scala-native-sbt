@@ -13,6 +13,9 @@ import scala.scalanative.build._
 nativeConfig ~= { c =>
   c.withLTO(LTO.none) // thin
     .withMode(Mode.debug) // releaseFast
-    .withGC(GC.immix) // commix
+    .withGC(GC.none) // commix
     .withDump(true)
+    .withDebugMetadata(true)
+    .withCompileOptions(c.compileOptions :+ "-g")
+    .withLinkingOptions(c.linkingOptions :+ "-g")
 }
